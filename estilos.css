@@ -1,1 +1,124 @@
+:root {
+    --primary-dark: #1a3a5f;
+    --primary: #2c5f9e;
+    --secondary: #4a90e2;
+    --accent: #a3c9f1;
+    --bg: #f0f4f8;
+    --text: #333;
+    --white: #ffffff;
+    --success: #27ae60;
+    --locked: #bdc3c7;
+}
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-dark);
+}
+
+.stats {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#reset-btn {
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Contenedor de la malla */
+#malla-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    align-items: flex-start;
+}
+
+.semestre {
+    min-width: 280px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.semestre h2 {
+    text-align: center;
+    color: var(--white);
+    background: var(--primary);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+/* Títulos de categorías (No interactivos) */
+.categoria-titulo {
+    font-weight: bold;
+    color: var(--primary-dark);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin: 15px 5px 5px 5px;
+    border-bottom: 2px solid var(--accent);
+}
+
+/* Tarjeta de Ramo */
+.ramo {
+    background: var(--white);
+    border: 1px solid var(--accent);
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.ramo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estado: Aprobado */
+.ramo.aprobado {
+    background-color: var(--success);
+    color: white;
+    text-decoration: line-through;
+    border-color: var(--success);
+}
+
+/* Estado: Bloqueado */
+.ramo.bloqueado {
+    background-color: var(--locked);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.ramo.bloqueado:hover {
+    transform: none;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #malla-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .semestre {
+        width: 90%;
+    }
+}

@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Interactiva - Cosmetología</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
 
+    <header>
+        <h1>Malla Curricular: Cosmetología y Estética</h1>
+        <p>Haz clic en los ramos para marcar tu progreso. Los cambios se guardan automáticamente.</p>
+        <div class="stats">
+            Progreso total: <span id="progress-percent">0%</span>
+        </div>
+    </header>
+
+    <main id="malla-container">
+        </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Ramo Bloqueado</h3>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
